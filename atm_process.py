@@ -66,3 +66,9 @@ def get_amount_of_money(action):
         return 0.0
     money = input("Enter the sum to " + action + ": ")
     return float(money)    
+
+
+def make_transaction(action, card_balance):
+    money = get_amount_of_money(action)
+    card_balance = move_money(action, money, card_balance)
+    log_transaction(action, money, card_balance)
